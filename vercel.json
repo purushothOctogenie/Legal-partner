@@ -26,7 +26,7 @@
     }
   ],
   "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "VITE_API_URL": "@vite_api_url"
+    "MONGODB_URI": "mongodb+srv://santhosh-p:santhosh@octogenie.gw4ag1g.mongodb.net/legal-b2b?retryWrites=true&w=majority&",
+    "VITE_API_URL": "http://localhost:3001"
   }
 }

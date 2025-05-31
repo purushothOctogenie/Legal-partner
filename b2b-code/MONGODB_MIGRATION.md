@@ -52,6 +52,7 @@ JWT_EXPIRY=3d
 ### 3. Running the Application
 
 1. Install dependencies:
+
    ```
    npm install
    ```
@@ -95,4 +96,4 @@ To migrate existing data from Firebase to MongoDB:
 2. Transform the data to match MongoDB schemas
 3. Import the data into MongoDB collections
 
-A separate script would be needed for this task, which is not included in this migration. 
+A separate script would be needed for this task, which is not included in this migration.
