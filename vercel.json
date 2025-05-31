@@ -26,7 +26,6 @@
     }
   ],
   "env": {
-    "MONGODB_URI": "mongodb+srv://santhosh-p:santhosh@octogenie.gw4ag1g.mongodb.net/legal-b2b?retryWrites=true&w=majority&",
-    "VITE_API_URL": "http://localhost:3001"
+    "VITE_API_URL": "https://${VERCEL_URL}"
   }
 }
