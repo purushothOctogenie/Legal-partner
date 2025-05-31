@@ -21,11 +21,12 @@
       "dest": "b2b-code/src/api/$1"
     },
     {
-      "handle": "filesystem"
+      "src": "/assets/(.*)",
+      "dest": "b2b-code/dist/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "b2b-code/dist/index.html"
     }
   ],
   "env": {
