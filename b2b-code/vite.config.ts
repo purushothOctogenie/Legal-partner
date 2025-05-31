@@ -9,6 +9,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    assetsDir: "assets",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
@@ -18,13 +19,16 @@ export default defineConfig({
           "react-vendor": ["react", "react-dom", "react-router-dom"],
           "utils-vendor": ["date-fns", "lucide-react"],
         },
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
   },
   optimizeDeps: {
     exclude: ["lucide-react"],
   },
-  base: "./",
+  base: "/",
   server: {
     port: 5173,
     proxy: {

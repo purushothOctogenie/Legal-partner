@@ -22,11 +22,15 @@
     },
     {
       "src": "/assets/(.*)",
-      "dest": "b2b-code/dist/assets/$1"
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|svg|json))",
+      "dest": "/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "b2b-code/dist/index.html"
+      "dest": "/index.html"
     }
   ],
   "env": {
