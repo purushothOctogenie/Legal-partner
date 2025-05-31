@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd b2b-code && npm run build",
+  "buildCommand": "cd b2b-code && npm install && npm run build",
   "outputDirectory": "b2b-code/dist",
   "builds": [
     {
