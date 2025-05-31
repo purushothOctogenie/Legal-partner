@@ -1,45 +1,21 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  root: ".",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
   build: {
     outDir: "dist",
-    emptyOutDir: true,
-    assetsDir: "assets",
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-      },
-      output: {
-        manualChunks: {
-          "react-vendor": ["react", "react-dom", "react-router-dom"],
-          "utils-vendor": ["date-fns", "lucide-react"],
-        },
-        assetFileNames: "assets/[name]-[hash][extname]",
-        chunkFileNames: "assets/[name]-[hash].js",
-        entryFileNames: "assets/[name]-[hash].js",
-      },
-    },
-  },
-  optimizeDeps: {
-    exclude: ["lucide-react"],
-  },
-  base: "/",
-  server: {
-    port: 5173,
-    proxy: {
-      "/api": {
-        target: "http://localhost:3001",
-        changeOrigin: true,
-        secure: false,
-      },
-    },
-  },
-  preview: {
-    port: 5173,
+    sourcemap: true,
+    minify: "terser",
   },
 });
